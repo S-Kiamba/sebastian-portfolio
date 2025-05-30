@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sebastian Morris Kiamba — Portfolio</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2100&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+    header a {
+      background-color: #3498db;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    header a:hover {
+      background-color: #2980b9;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #eee;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #3498db;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    /* Skills Section */
+ <!--   .skills {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 2rem;
+	  margin-bottom: 3rem;
+	  justify-content: center;
+    }
+    .skill-list {
+      flex: 1 1 280px;
+      background-color: #222;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    } -->
+	  .skills-row {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  gap: 2rem;
+	  margin-bottom: 3rem;
+	}
+
+	.skill-list {
+	  flex: 1 1 280px;
+	  background-color: #222;
+	  padding: 1.5rem;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+	  min-width: 280px;
+	}
+    .skill-list h3 {
+      margin-top: 0;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #3498db;
+    }
+    .skill-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .skill-list ul li {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+    /* Portfolio Section */
+    #portfolio {
+      margin-bottom: 3rem;
+    }
+    #portfolio h2 {
+      text-align: center;
+      color: #3498db;
+      margin-bottom: 1.5rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .project {
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .project:hover {
+      transform: translateY(-6px);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+    }
+    .project-title {
+      font-weight: 600;
+      color: #eee;
+      margin-bottom: 0.4rem;
+    }
+    .project-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+    /* Contact Section */
+    #contact {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+    #contact h2 {
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
+    #contact p {
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.75);
+    }
+    #contact a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      display: inline-block;
+      color: #eee;
+      transition: color 0.3s ease;
+    }
+    #contact a:hover {
+      color: #3498db;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      border-top: 1px solid #444;
+    }
+    /* Responsive */
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div><strong>Sebastian Kiamba</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header id="about">
+  <h1>Sebastian Morris Kiamba</h1>
+  <p>Bridging Code and Coordination — Software Engineer | Scrum Master | Project Manager</p>
+  <a href="#projects">See My Work</a>
+</header>
+
+<!--<section class="container" id="skills">
+  <div class="skills">
+    <div class="skill-list">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Java</li>
+        <li>ReactJS</li>
+        <li>SQL</li>
+        <li>Git, Jenkins, JIRA, Confluence, Postman, Docker (basic)</li>
+        <li>System Design & Architecture</li>
+        <li>API Integration & Mobile Banking Systems</li>
+      </ul>
+    </div>
+    <div class="skill-list">
+      <h3>Project & Agile Skills</h3>
+      <ul>
+        <li>Scrum & Agile Methodologies</li>
+        <li>Sprint Planning & Retrospectives</li>
+        <li>Stakeholder Communication</li>
+        <li>Team Leadership & Coaching</li>
+        <li>Risk & Scope Management</li>
+      </ul>
+    </div>
+    <div class="skill-list">
+      <h3>Fintech Specialties</h3>
+      <ul>
+        <li>Mobile Banking Solutions</li>
+        <li>Microfinance Systems</li>
+        <li>Loan Tracking & Monitoring</li>
+        <li>Agency Banking</li>
+        <li>Digital Payment Systems</li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+				<section style="padding: 40px; font-family: Trebuchet MS, sans-serif; id="skills">
+				  <!--<h2 style="color: #003366; font-size: 28px; margin-bottom: 30px; text-align: center;">My Core Skills</h2> -->
+				  
+				  <div class="skills">
+
+					<!-- Technical Skills -->
+					<div class="skill-list">
+					  <h3 style="color: #005288; font-size: 20px; margin-bottom: 10px;">Technical Skills</h3>
+					  <ul>
+						<li><strong>Programming:</strong> Java, ReactJS, SQL</li>
+						<li><strong>Tools & Platforms:</strong> Git, Jenkins, JIRA, Confluence, Postman, Docker (basic)</li>
+						<li><strong>System Design & Architecture</strong></li>
+						<li><strong>API Integration & Mobile Banking Systems</strong></li>
+					  </ul>
+					</div>
+
+					<!-- Fintech Specialties -->
+					<div class="skill-list">
+					  <h3 style="color: #005288; font-size: 20px; margin-bottom: 10px;">Fintech Specialties</h3>
+					  <ul>
+						<li>Mobile & Agency Banking Solutions</li>
+						<li>Core Banking Integration</li>
+						<li>User-Centric Design</li>
+						<li>MVP Rollouts & Client Onboarding</li>
+					  </ul>
+					</div>
+
+					<!-- Project & Agile Skills -->
+					<div class="skill-list">
+					  <h3 style="color: #005288; font-size: 20px; margin-bottom: 10px;">Project & Agile Skills</h3>
+					  <ul>
+						<li>Agile/Scrum Frameworks (Certified Scrum Master)</li>
+						<li>Project Planning & Execution</li>
+						<li>Stakeholder Communication</li>
+						<li>Risk & Change Management</li>
+						<li>Team Leadership & Coaching</li>
+						<li>Product Ownership Collaboration</li>
+					  </ul>
+					</div>
+
+				  </div>
+				</section>
+
+
+<section id="projects" class="container">
+  <h2 style="text-align:center; color:#3498db; margin-bottom: 2rem;">Featured Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200?text=Project+1" alt="Project 1">
+      <div class="project-content">
+        <div class="project-title">Bimas Agent Travel System</div>
+        <div class="project-desc">Tracked loan officers' travel logs and optimized field operations.</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200?text=Project+2" alt="Project 2">
+      <div class="project-content">
+        <div class="project-title">EtIFT Mobile Banking</div>
+        <div class="project-desc">Unified mobile experience across Ethiopian MFIs with core banking links.</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200?text=Project+3" alt="Project 3">
+      <div class="project-content">
+        <div class="project-title">Fintech Worldwide Launch</div>
+        <div class="project-desc">Onboarded Yemen-based bank onto Br.net channels and infrastructure.</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200?text=Project+4" alt="Project 4">
+      <div class="project-content">
+        <div class="project-title">Cheque Services Platform</div>
+        <div class="project-desc">Enabled real-time cheque stop, status checks, and request flows.</div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200?text=Project+5" alt="Project 5">
+      <div class="project-content">
+        <div class="project-title">Standing Order Engine</div>
+        <div class="project-desc">Developed rule-based engine for managing scheduled bank transfers.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Me</h2>
+  <p>Feel free to connect or reach out via any platform below:</p>
+  <a href="https://www.linkedin.com/in/sebastian-kiamba-project-manager-sfc/" target="_blank" aria-label="LinkedIn">&#128100;</a>
+  <a href="https://github.com/sebastiankiamba" target="_blank" aria-label="GitHub">&#128187;</a>
+  <a href="mailto:sebastiankiamba93@gmail.com" aria-label="Email">&#9993;</a>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Sebastian Kiamba. All rights reserved.
+</footer>
+
+<script>
+  // Set current year dynamically
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
